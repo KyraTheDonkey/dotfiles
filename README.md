@@ -5,6 +5,7 @@ think I've done so far.
 
 
 Running on Arch.
+Terminal: Alacritty
 WM: i3
 Compositor: picom
 Text editor: vim
