@@ -1,0 +1,55 @@
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+
+! window padding
+st.borderpx: 20
+
+!-- values between 0.1  - 1.0 --! 
+
+st.alpha: 1.0 
+st.font:           JetBrainsMono Nerd Font:style:medium:pixelsize=15
+
+#define base00 #1e2127
+#define base01 #5c6370
+#define base02 #e06c75
+#define base03 #98c379
+#define base04 #d19a66
+#define base05 #61afef
+#define base06 #c678dd
+#define base07 #56b6c2
+#define base08 #828791
+#define base09 #e6efff
+
+! #define base09 #d19a66
+! #define base0A #e5c07b
+! #define base0B #98c379
+! #define base0C #56b6c2
+! #define base0D #61afef
+! #define base0E #c678dd
+! #define base0F #be5046
+
+*foreground:   abb2bf
+*background:   base00
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base02
+*color2:       base03
+*color3:       base04
+*color4:       base05
+*color5:       base06
+*color6:       base07
+*color7:       base08
+
+*color8:       base01
+*color9:       base02
+*color10:      base03
+*color11:      base04
+*color12:      base05
+*color13:      base06
+*color14:      base07
+*color15:      base09
