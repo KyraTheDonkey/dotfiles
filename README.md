@@ -1,7 +1,7 @@
 So far, there's not going to be much here, but I'm just going to put what I
 think I've done so far.
 
-#!!! --- Use chezmoi to copy these dotfiles --- !!!
+# !!! --- Use chezmoi to copy these dotfiles --- !!!
 
 
 Running on Arch.

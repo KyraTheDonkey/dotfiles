@@ -189,3 +189,5 @@ bindsym $mod+r mode "resize"
 
 for_window [class=".*"] border pixel 0
 gaps inner 5
+
+bindsym Print exec flameshot gui
