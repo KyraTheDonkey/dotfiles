@@ -9,6 +9,7 @@ Terminal: Alacritty
 WM: i3
 Compositor: picom
 Text editor: vim
+Prompt: Starship
 
 Fonts installed: JetBrains NF Mono
 (These two should work from AUR, but they don't right now)

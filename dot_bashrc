@@ -118,3 +118,11 @@ fi
 
 complete -f -X '!*.simpl' simplc
 export EDITOR='vim'
+
+if [ -f ~/.profile ]; then
+	. ~/.profile
+fi
+
+# Make sure starship is installed with
+# curl -sS https://starship.rs/install.sh | sh
+eval "$(starship init bash)"
