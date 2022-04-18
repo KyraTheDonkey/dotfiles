@@ -1,146 +1,69 @@
-[aws]
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+format = """
+[](#98c379)\
+$username\
+[](bg:#61afef fg:#98c379)\
+$directory\
+[](fg:#61afef bg:#e06c75)\
+$git_branch\
+$git_status\
+[](fg:#e06c75 bg:#d19a66)\
+$nodejs\
+$rust\
+[](fg:#d19a66 bg:#c678dd)\
+$time\
+[ ](fg:#c678dd)\
+"""
 
-[cmake]
-format = '\[[$symbol($version)]($style)\]'
+# Disable the blank line at the start of the prompt
+# add_newline = false
 
-[cmd_duration]
-format = '\[[⏱ $duration]($style)\]'
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:#98c379 fg:#1e2127"
+style_root = "bg:#98c379 fg:#1e2127"
+format = '[$user ]($style)'
 
-[cobol]
-format = '\[[$symbol($version)]($style)\]'
+[directory]
+style = "bg:#61afef fg:#1e2127"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[conda]
-format = '\[[$symbol$environment]($style)\]'
-
-[crystal]
-format = '\[[$symbol($version)]($style)\]'
-
-[dart]
-format = '\[[$symbol($version)]($style)\]'
-
-[deno]
-format = '\[[$symbol($version)]($style)\]'
-
-[docker_context]
-format = '\[[$symbol$context]($style)\]'
-
-[dotnet]
-format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
-
-[elixir]
-format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
-
-[elm]
-format = '\[[$symbol($version)]($style)\]'
-
-[erlang]
-format = '\[[$symbol($version)]($style)\]'
-
-[gcloud]
-format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
 
 [git_branch]
-format = '\[[$symbol$branch]($style)\]'
+symbol = ""
+style = "bg:#e06c75 fg:#1e2127"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
-
-[golang]
-format = '\[[$symbol($version)]($style)\]'
-
-[haskell]
-format = '\[[$symbol($version)]($style)\]'
-
-[helm]
-format = '\[[$symbol($version)]($style)\]'
-
-[hg_branch]
-format = '\[[$symbol$branch]($style)\]'
-
-[java]
-format = '\[[$symbol($version)]($style)\]'
-
-[julia]
-format = '\[[$symbol($version)]($style)\]'
-
-[kotlin]
-format = '\[[$symbol($version)]($style)\]'
-
-[kubernetes]
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
-
-[lua]
-format = '\[[$symbol($version)]($style)\]'
-
-[memory_usage]
-format = '\[$symbol[$ram( | $swap)]($style)\]'
-
-[nim]
-format = '\[[$symbol($version)]($style)\]'
-
-[nix_shell]
-format = '\[[$symbol$state( \($name\))]($style)\]'
+style = "bg:#e06c75 fg:#1e2127"
+format = '[($all_status$ahead_behind )]($style)'
 
 [nodejs]
-format = '\[[$symbol($version)]($style)\]'
-
-[ocaml]
-format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
-
-[openstack]
-format = '\[[$symbol$cloud(\($project\))]($style)\]'
-
-[package]
-format = '\[[$symbol$version]($style)\]'
-
-[perl]
-format = '\[[$symbol($version)]($style)\]'
-
-[php]
-format = '\[[$symbol($version)]($style)\]'
-
-[pulumi]
-format = '\[[$symbol$stack]($style)\]'
-
-[purescript]
-format = '\[[$symbol($version)]($style)\]'
-
-[python]
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
-
-[red]
-format = '\[[$symbol($version)]($style)\]'
-
-[ruby]
-format = '\[[$symbol($version)]($style)\]'
+symbol = ""
+style = "bg:#d19a66 fg:#1e2127"
+format = '[ $symbol ($version) ]($style)'
 
 [rust]
-format = '\[[$symbol($version)]($style)\]'
-
-[scala]
-format = '\[[$symbol($version)]($style)\]'
-
-[sudo]
-format = '\[[as $symbol]\]'
-
-[swift]
-format = '\[[$symbol($version)]($style)\]'
-
-[terraform]
-format = '\[[$symbol$workspace]($style)\]'
+symbol = ""
+style = "bg:#d19a66 fg:#1e2127"
+format = '[ $symbol ($version) ]($style)'
 
 [time]
-format = '\[[$time]($style)\]'
-
-[username]
-format = '\[[$user]($style)\]'
-
-[vagrant]
-format = '\[[$symbol($version)]($style)\]'
-
-[vlang]
-format = '\[[$symbol($version)]($style)\]'
-
-[zig]
-format = '\[[$symbol($version)]($style)\]'
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#c678dd fg:#1e2127"
+format = '[ ♥ $time ]($style)'

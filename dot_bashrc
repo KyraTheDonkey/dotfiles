@@ -118,6 +118,7 @@ fi
 
 complete -f -X '!*.simpl' simplc
 export EDITOR='vim'
+alias mntgdrive='rclone mount kyragoogledrive: ~/kyragoogledrive/ --vfs-cache-mode=writes' # Needs to be setup in rclone
 
 if [ -f ~/.profile ]; then
 	. ~/.profile
