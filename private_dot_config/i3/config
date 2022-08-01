@@ -191,5 +191,9 @@ bindsym $mod+r mode "resize"
 
 for_window [class=".*"] border pixel 3
 gaps inner 3
+# I only find the last one to have any effect, so the last of Focused is where I
+# change the actual border colour
 client.focused #98c379 #5c6370 #ffffff #5c6370 #98c379
-bindsym Print exec flameshot gui
+client.focused_inactive #333333 #222222 #888888 #292d2e #222222
+client.unfocused #333333 #222222 #888888 #292d2e #222222
+bindsym Print exec flameshot 
