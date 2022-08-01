@@ -196,4 +196,4 @@ gaps inner 3
 client.focused #98c379 #5c6370 #ffffff #5c6370 #98c379
 client.focused_inactive #333333 #222222 #888888 #292d2e #222222
 client.unfocused #333333 #222222 #888888 #292d2e #222222
-bindsym Print exec flameshot 
+bindsym Print exec flameshot gui
