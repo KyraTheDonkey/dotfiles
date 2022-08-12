@@ -1,2 +1,3 @@
 sleep 2
 xrandr --dpi 40
+export QT_QPA_PLATFORMTHEME=qt5ct
