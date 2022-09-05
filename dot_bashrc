@@ -129,6 +129,6 @@ fi
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 
-export LINGO_19_HOME="/home/seanvw2/lingo19"
+export LINGO_19_HOME="$HOME/lingo19"
 
-export PATH="/home/seanvw2/lingo19:$PATH"
+export PATH="$HOME/lingo19:$PATH"
