@@ -1,0 +1,38 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zhistfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd nomatch
+unsetopt beep extendedglob notify
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/seanvw2/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+if [ -x /usr/bin/dircolors ]; then
+	alias ls='ls --color=auto'
+fi
+
+if [ -f ~/.profile ]; then
+	. ~/.profile 
+fi
+
+export EDITOR='vim'
+
+# Rust's cargo
+. "$HOME/.cargo/env"
+
+# Make sure starship is installed with
+# curl -sS https://starship.rs/install.sh | sh
+# Add your shell in here so that it doesn't activate in tty
+case "$TERM" in
+	linux) 
+		;;
+	*) 
+		eval "$(starship init zsh)"
+		;;
+esac
