@@ -124,11 +124,18 @@ if [ -f ~/.profile ]; then
 	. ~/.profile
 fi
 
-# Make sure starship is installed with
-# curl -sS https://starship.rs/install.sh | sh
-eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 
 export LINGO_19_HOME="$HOME/lingo19"
 
 export PATH="$HOME/lingo19:$PATH"
+
+# Make sure starship is installed with
+# curl -sS https://starship.rs/install.sh | sh
+case "$TERM" in 
+	linux)
+		;;
+	*)
+		eval "$(starship init bash)"
+		;;
+esac
