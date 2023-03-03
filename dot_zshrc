@@ -21,10 +21,21 @@ if [ -f ~/.profile ]; then
 	. ~/.profile 
 fi
 
-export EDITOR='vim'
+alias vim='nvim'
+export EDITOR='nvim'
 
 # Rust's cargo
 . "$HOME/.cargo/env"
+
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # Make sure starship is installed with
 # curl -sS https://starship.rs/install.sh | sh
