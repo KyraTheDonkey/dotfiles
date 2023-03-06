@@ -21,15 +21,9 @@ if [ -f ~/.profile ]; then
 	. ~/.profile 
 fi
 
-alias vim='nvim'
-export EDITOR='nvim'
-
-# Rust's cargo
-. "$HOME/.cargo/env"
-
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
 
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
