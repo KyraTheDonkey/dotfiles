@@ -22,3 +22,7 @@ Fonts
 - Unifont
 - Material Design Icons
 - Noto Color Emojis
+
+## Oh-My-Zsh
+I've installed Oh-My-Zsh, but some plugins will need to be installed manually.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
