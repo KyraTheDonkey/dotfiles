@@ -24,5 +24,6 @@ Fonts
 - Noto Color Emojis
 
 ## Oh-My-Zsh
-I've installed Oh-My-Zsh, but some plugins will need to be installed manually.
+I've installed [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh),
+but some plugins will need to be installed manually.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
