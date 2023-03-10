@@ -6,6 +6,8 @@ think I've done so far.
 I've tried to keep this somewhat distro independent. Somethings have been
 installed myself, such as [NvChad](https://github.com/NvChad/NvChad) and
 a [theme](https://github.com/adi1090x/rofi) for Rofi.
+You will also need to manually add the global gitignore found in
+`.config/git/global_gitignore`
 
 - Dotfile Manager: Chezmoi
 - Distro: Arch Linux
