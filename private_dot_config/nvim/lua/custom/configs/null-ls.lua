@@ -17,6 +17,17 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+  -- java
+  b.formatting.google_java_format,
+
+  -- python
+  b.formatting.autopep8,
+
+  -- latexindent
+  b.formatting.latexindent,
+
+  b.diagnostics.misspell.with { extra_args = { "-locale", "UK"} },
 }
 
 null_ls.setup {
