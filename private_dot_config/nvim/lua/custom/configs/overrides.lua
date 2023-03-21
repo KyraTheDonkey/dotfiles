@@ -25,11 +25,15 @@ M.mason = {
     "clangd",
     "jdtls",
     "texlab",
-    
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
     "deno",
+    "google-java-format",
+    "misspell",
+    "autopep8",
+    "clang-format",
+    "prettier",
   },
 }
 
