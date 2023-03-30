@@ -53,7 +53,7 @@ tags
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # Bro I just don't care, don't store any of this.
-#.idea/
+.idea/
 
 # User-specific stuff
 .idea/**/workspace.xml
@@ -254,3 +254,13 @@ local.properties
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
+
+## LaTeX
+*.bbl
+*.blg
+*.out
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.log
