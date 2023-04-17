@@ -4,7 +4,7 @@ vim.o.textwidth = 80
 
 -- TeX has some special rules.
 autocmd({"BufNewFile","BufRead"}, {
-  pattern = "*.tex",
+  pattern = "*.tex,*.bib,*.md",
   command = "set textwidth=0",
 })
 autocmd({"BufNewFile", "BufRead"}, {
