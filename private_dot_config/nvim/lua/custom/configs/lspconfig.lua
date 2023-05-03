@@ -23,7 +23,7 @@ lspconfig["texlab"].setup {
         args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
         executable = "latexmk",
         forwardSearchAfter = false,
-        onSave = true
+        onSave = false
       },
       chktex = {
         onEdit = false,

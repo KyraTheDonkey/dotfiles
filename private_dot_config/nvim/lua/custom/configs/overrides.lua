@@ -34,6 +34,7 @@ M.mason = {
     "autopep8",
     "clang-format",
     "prettier",
+    "python-lsp-server",
   },
 }
 

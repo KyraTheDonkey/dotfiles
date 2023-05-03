@@ -11,3 +11,9 @@ autocmd({"BufNewFile", "BufRead"}, {
   pattern = "*.tex",
   command = "setlocal spell spelllang=en_gb",
 })
+
+vim.filetype.add({
+  extension = {
+    simpl = 'simpl',
+  }
+})

@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -26,6 +26,10 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+    config = function()
+      require "plugins.configs.treesitter"
+      require "custom.configs.treesitter"
+    end,
   },
 
   {
@@ -53,11 +57,25 @@ local plugins = {
   --   enabled = false
   -- },
 
-   -- Uncomment if you want to re-enable which-key
-   {
-     "folke/which-key.nvim",
-     enabled = true,
-   },
+  -- Uncomment if you want to re-enable which-key
+  {
+    "folke/which-key.nvim",
+    enabled = true,
+    lazy = false,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+  },
+
+  {
+    "Wansmer/treesj",
+    keys = { "<space>m", "<space>j", "<space>s" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesj").setup()
+    end,
+  },
 }
 
 return plugins
