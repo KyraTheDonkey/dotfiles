@@ -129,7 +129,6 @@ if [ -f ~/.bashrc_local ]; then
   . ~/.bashrc_local ];
 fi
 
-. "$HOME/.cargo/env"
 
 # Make sure starship is installed with
 # curl -sS https://starship.rs/install.sh | sh
