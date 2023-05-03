@@ -1,12 +1,13 @@
 # To add to git: $ git config --global core.excludesfile ~/.config/git/global_gitignore
 
 # VSCode Files
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+.vscode/
+#.vscode/*
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
+#!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
@@ -264,3 +265,6 @@ local.properties
 *.fls
 *.synctex.gz
 *.log
+*.toc 
+*.run.xml
+*.bcf
