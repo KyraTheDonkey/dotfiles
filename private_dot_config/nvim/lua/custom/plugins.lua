@@ -26,8 +26,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
-    config = function()
-      require "plugins.configs.treesitter"
+    init = function()
       require "custom.configs.treesitter"
     end,
   },
@@ -35,6 +34,15 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
+  },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        wrap_results = true,
+      },
+    },
   },
 
   {
@@ -66,6 +74,10 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter-context",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("nvim-treesitter-context").setup()
+    end,
   },
 
   {
@@ -76,6 +88,14 @@ local plugins = {
       require("treesj").setup()
     end,
   },
+
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function ()
+      require("trouble").setup()
+    end
+  }
 }
 
 return plugins
